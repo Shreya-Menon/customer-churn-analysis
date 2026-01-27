@@ -8,176 +8,109 @@ The aim of this project is to analyze customer churn behavior and identify the k
 
 ## Objectives
 
-Understand customer demographics, services, and financial behavior
-Clean and preprocess raw customer data for analysis
-Identify key churn drivers using Exploratory Data Analysis (EDA)
-
-Validate insights using SQL-based business analysis
-
-Visualize churn patterns and revenue impact using Power BI
-
-Provide actionable business recommendations to reduce churn
+1. Understand customer demographics, services, and financial behavior
+2. Clean and preprocess raw customer data for analysis
+3. Identify key churn drivers using Exploratory Data Analysis (EDA)
+4. Validate insights using SQL-based business analysis
+5. Visualize churn patterns and revenue impact using Power BI
+6. Provide actionable business recommendations to reduce churn
 
 ## Dataset Description
 
-The dataset contains customer-level information including:
-
-Demographics: Age, Gender, Marital Status, Dependents
-
-Geographical Data: Population (location fields removed during preprocessing)
-
-Service Details: Internet type, streaming services, security, support, contracts
-
-Financial Metrics: Monthly charges, total revenue, refunds, CLTV
-
-Customer Engagement: Tenure, referrals, satisfaction score
-
-Churn Information: Churn label, churn category, churn reason
-
-Each row represents a single customer, and the target variable is Churn Label.
+- The dataset contains customer-level information including:
+- Demographics: Age, Gender, Marital Status, Dependents
+- Geographical Data: Population (location fields removed during preprocessing)
+- Service Details: Internet type, streaming services, security, support, contracts
+- Financial Metrics: Monthly charges, total revenue, refunds, CLTV
+- Customer Engagement: Tenure, referrals, satisfaction score
+- Churn Information: Churn label, churn category, churn reason
+- Each row represents a single customer, and the target variable is Churn Label.
 
 ## Tools and Technologies Used
 
-Python (Jupyter Notebook): Data cleaning, preprocessing, and EDA
-
-PostgreSQL (pgAdmin): SQL-based business analysis
-
-Power BI Desktop: Interactive dashboards and visual storytelling
-
-Git & GitHub: Version control and project hosting
+- Python (Jupyter Notebook): Data cleaning, preprocessing, and EDA
+- PostgreSQL (pgAdmin): SQL-based business analysis
+- Power BI Desktop: Interactive dashboards and visual storytelling
+- Git & GitHub: Version control and project hosting
 
 ## Project Workflow
 
-Raw data ingestion and understanding
-
-Data cleaning and preprocessing using Python
-
-Exploratory Data Analysis (EDA) to identify churn patterns
-
-SQL-based validation of key insights
-
-Power BI dashboard creation for executive storytelling
-
-Business recommendations and future enhancement planning
+1. Raw data ingestion and understanding
+2. Data cleaning and preprocessing using Python
+3. Exploratory Data Analysis (EDA) to identify churn patterns
+4. SQL-based validation of key insights
+5. Power BI dashboard creation for executive storytelling
+6. Business recommendations and future enhancement planning
 
 ## Data Cleaning and Preprocessing
 
-Removed identifier and high-cardinality location columns
-
-Handled missing values using median (numerical) and mode/“Unknown” (categorical)
-
-Converted churn labels into binary format
-
-Created tenure groups to analyze churn across customer lifecycle stages
-
-Engineered revenue-based metrics for deeper business insights
+1. Removed identifier and high-cardinality location columns
+2. Handled missing values using median (numerical) and mode/“Unknown” (categorical)
+3. Converted churn labels into binary format
+4. Created tenure groups to analyze churn across customer lifecycle stages
+5. Engineered revenue-based metrics for deeper business insights
 
 ## Exploratory Data Analysis (EDA) Using Python
 
 EDA was performed to understand relationships between churn and:
 
-Customer tenure
-
-Contract type
-
-Monthly charges
-
-Satisfaction score
-
-Service add-ons (security, support, streaming)
-
-Revenue and CLTV
-
-Multiple visualizations such as bar charts, box plots, histograms, and heatmaps were used to identify trends and patterns.
+- Customer tenure
+- Contract type
+- Monthly charges
+- Satisfaction score
+- Service add-ons (security, support, streaming)
+- Revenue and CLTV
+- Multiple visualizations such as bar charts, box plots, histograms, and heatmaps were used to identify trends and patterns.
 
 ## Key Insights from Python Analysis
 
-Customers with short tenure are more likely to churn
-
-Month-to-month contracts show the highest churn rate
-
-Higher monthly charges increase churn risk
-
-Customers without premium support or security services churn more
-
-Low satisfaction scores strongly correlate with churn
-
-Churn leads to reduced Customer Lifetime Value (CLTV)
+1. Customers with short tenure are more likely to churn
+2. Month-to-month contracts show the highest churn rate
+3. Higher monthly charges increase churn risk
+4. Customers without premium support or security services churn more
+5. Low satisfaction scores strongly correlate with churn
+6. Churn leads to reduced Customer Lifetime Value (CLTV)
 
 ## SQL-Based Business Analysis
 
 PostgreSQL was used to:
-
-Calculate churn rates across customer segments
-
-Analyze churn by contract type, tenure, and payment method
-
-Measure revenue and CLTV impact due to churn
-
-Identify high-value customers who are at churn risk
-
-Prepare SQL views for Power BI reporting
+1. Calculate churn rates across customer segments
+2. Analyze churn by contract type, tenure, and payment method
+3. Measure revenue and CLTV impact due to churn
+4. Identify high-value customers who are at churn risk
+5. Prepare SQL views for Power BI reporting
 
 ## Key Insights from SQL Analysis
 
-Month-to-month customers churn significantly more than long-term contract users
-
-Early-stage customers contribute most to churn volume
-
-Low satisfaction scores consistently predict churn
-
-Churn results in substantial lifetime revenue loss
-
-Premium services reduce churn probability
-
-High-CLTV customers are also at risk and need proactive retention
+1. Month-to-month customers churn significantly more than long-term contract users
+2. Early-stage customers contribute most to churn volume
+3. Low satisfaction scores consistently predict churn
+4. Churn results in substantial lifetime revenue loss
+5. Premium services reduce churn probability
+6. High-CLTV customers are also at risk and need proactive retention
 
 ## Power BI Dashboard Development
-## Page 1: Executive Overview
 
-Overall churn rate and customer count
+Page 1: Executive Overview- Overall churn rate and customer count, Revenue and average CLTV, Churn distribution and contract-wise churn
 
-Revenue and average CLTV
+Page 2: Churn Drivers Analysis- Impact of satisfaction score, monthly charges, and tenure, Service-based churn comparison, Contract vs satisfaction heatmap
 
-Churn distribution and contract-wise churn
-
-## Page 2: Churn Drivers Analysis
-
-Impact of satisfaction score, monthly charges, and tenure
-
-Service-based churn comparison
-
-Contract vs satisfaction heatmap
-
-## Page 3: Revenue Impact & Retention Strategy
-
-Revenue loss due to churn
-
-CLTV vs monthly charges
-
-Identification of high-risk, high-value customers
+Page 3: Revenue Impact & Retention Strategy- Revenue loss due to churn, CLTV vs monthly charges, Identification of high-risk, high-value customers
 
 ## Key Insights from Power BI Dashboard
 
-Early-tenure and month-to-month customers are the most vulnerable
-
-Low satisfaction amplifies churn across all contract types
-
-Revenue loss is driven by churn among medium and high-value customers
-
-Bundled services and long-term contracts improve retention
+- Early-tenure and month-to-month customers are the most vulnerable
+- Low satisfaction amplifies churn across all contract types
+- Revenue loss is driven by churn among medium and high-value customers
+- Bundled services and long-term contracts improve retention
 
 ## Business Recommendations
 
-Improve onboarding experience for early-tenure customers
-
-Incentivize month-to-month customers to shift to long-term contracts
-
-Bundle premium support and security services
-
-Monitor satisfaction scores and trigger early retention campaigns
-
-Prioritize high-CLTV customers with proactive engagement strategies
+- Improve onboarding experience for early-tenure customers
+- Incentivize month-to-month customers to shift to long-term contracts
+- Bundle premium support and security services
+- Monitor satisfaction scores and trigger early retention campaigns
+- Prioritize high-CLTV customers with proactive engagement strategies
 
 ## Conclusion
 
@@ -185,12 +118,8 @@ This project demonstrates an end-to-end customer churn analysis using Python, SQ
 
 ## Future Enhancements
 
-Build a predictive churn model using machine learning
-
-Automate data refresh and dashboard updates
-
-Perform cohort-based churn analysis
-
-Integrate real-time customer feedback data
-
-Deploy dashboards to Power BI Service for stakeholders
+- Build a predictive churn model using machine learning
+- Automate data refresh and dashboard updates
+- Perform cohort-based churn analysis
+- Integrate real-time customer feedback data
+- Deploy dashboards to Power BI Service for stakeholders
