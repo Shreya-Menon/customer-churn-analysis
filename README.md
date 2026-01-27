@@ -92,10 +92,13 @@ PostgreSQL was used to:
 ## Power BI Dashboard Development
 
 Page 1: Executive Overview- Overall churn rate and customer count, Revenue and average CLTV, Churn distribution and contract-wise churn
+<img width="1272" height="711" alt="image" src="https://github.com/user-attachments/assets/090bea36-fee0-46f8-9c4f-cafeb80c81b1" />
 
 Page 2: Churn Drivers Analysis- Impact of satisfaction score, monthly charges, and tenure, Service-based churn comparison, Contract vs satisfaction heatmap
+<img width="1276" height="712" alt="image" src="https://github.com/user-attachments/assets/f1aa1379-814a-4e10-b1aa-dbf08669dd8b" />
 
 Page 3: Revenue Impact & Retention Strategy- Revenue loss due to churn, CLTV vs monthly charges, Identification of high-risk, high-value customers
+<img width="1157" height="710" alt="image" src="https://github.com/user-attachments/assets/e5bd279a-15d8-434d-b4f1-9f324e5c8fee" />
 
 ## Key Insights from Power BI Dashboard
 
