@@ -71,6 +71,64 @@ EDA was performed to understand relationships between churn and:
 5. Low satisfaction scores strongly correlate with churn
 6. Churn leads to reduced Customer Lifetime Value (CLTV)
 
+## Hypothesis Testing
+
+Hypothesis testing was performed to validate whether observed patterns in the data were statistically significant and not due to random chance.
+| Hypothesis | Test Used      | p-value   | Effect Size | Decision  |
+| ---------- | -------------- | --------- | ----------- | --------- |
+| H1         | t-test         | 0.0001    | -0.45       | Reject H₀ |
+| H2         | t-test         | 8.59e-73  | -2.60       | Reject H₀ |
+| H3         | t-test         | 0.0003    | 0.44        | Reject H₀ |
+| H4         | Mann–Whitney U | 3.38e-210 | —           | Reject H₀ |
+| H5         | t-test         | 0.02      | 0.16        | Reject H₀ |
+
+- Parametric tests : when normality assumptions were met
+- Non-parametric tests : when distributions were skewed
+
+## Statistical vs Practical Significance
+While several hypotheses showed extremely low p-values, effect sizes were also analyzed to distinguish between statistical significance and real-world business impact.
+
+## Business Interpretation of Hypothesis Testing
+
+The hypothesis tests were conducted to validate whether observed churn patterns were statistically significant and meaningful from a business perspective. Along with p-values, effect sizes were analyzed to measure the practical impact of each factor on customer churn.
+
+Hypothesis 1 – Moderate Negative Effect (Effect Size ~ -0.45)
+- Indicates a moderate practical difference between the compared customer groups.
+- This factor has a noticeable influence on churn, though it is not the strongest driver.
+Business Interpretation:
+Improving this factor can lead to measurable churn reduction but should be paired with stronger drivers for maximum impact.
+
+Hypothesis 2 – Very Large Negative Effect (Effect Size ~ -2.60)
+- Represents a very strong and practically significant effect, not just statistical significance.
+- One of the most influential churn drivers in the dataset.
+Business Interpretation:
+This factor should be a top priority for retention strategies. Customers falling into this category are at extremely high risk of churn, and targeted interventions (offers, contract changes, proactive support) can deliver high ROI
+
+Hypothesis 3 – Moderate Positive Effect (Effect Size ~ 0.45)
+- Shows a moderate and meaningful difference between customer groups.
+- Confirms that the factor positively correlates with churn behavior.
+Business Interpretation:
+This variable can be used effectively for customer segmentation and early churn prediction, especially when combined with tenure and revenue metrics.
+
+Hypothesis 4 – Strong Statistical Significance (Mann–Whitney U Test)
+- Extremely low p-value confirms a real difference in distributions between churned and non-churned customers.
+- Non-parametric test was used due to skewed data distribution.
+Business Interpretation:
+Even without a calculated effect size, the magnitude of statistical significance indicates this factor is highly relevant and should be monitored closely in churn prevention dashboards.
+
+Hypothesis 5 – Small Effect (Effect Size ~ 0.16)
+- Indicates a small but statistically significant effect.
+- This factor alone does not strongly drive churn.
+Business Interpretation:
+This variable should be treated as a supporting indicator rather than a primary decision variable. It adds value when combined with stronger churn predictors but does not justify standalone business actions.
+
+## Business Takeaway
+- Not all statistically significant factors are equally valuable from a business standpoint.
+- Effect size analysis helped distinguish high-impact churn drivers from minor contributors.
+- Retention strategies should focus primarily on factors with large to moderate effect sizes, while small-effect variables can support predictive models and monitoring.
+
+Detailed implementation available in notebooks/hypothesis_testing.ipynb
+
 ## SQL-Based Business Analysis
 
 PostgreSQL was used to:
