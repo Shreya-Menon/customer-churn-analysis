@@ -129,6 +129,64 @@ This variable should be treated as a supporting indicator rather than a primary 
 
 Detailed implementation available in notebooks/hypothesis_testing.ipynb
 
+## A/B Testing
+
+A/B Test was performed to test whether a retention intervention reduces churn.
+- Designed a randomized control experiment to evaluate retention strategies
+- Simulated control and treatment groups
+- Applied two-proportion z-test to measure churn reduction
+- Calculated effect size and estimated business impact
+- Provided statistically backed recommendations
+- Conducted power analysis to determine minimum sample size
+- Estimated confidence intervals for churn reduction
+- Validated statistical significance and practical impact
+
+## How This A/B Test Would Run in Production
+1️. Experiment Objective
+The goal of the experiment is to evaluate whether a targeted retention intervention reduces customer churn compared to the existing approach, without negatively impacting revenue or user experience.
+
+2️. User Eligibility & Targeting
+Customers are selected based on:
+- High churn risk identified through historical churn analysis
+- Active customers within the last 30 days
+
+Exclusions:
+- Recently churned users
+- Users already receiving promotional offers
+
+3️. Randomization Strategy
+Eligible users are randomly assigned to:
+- Control group (50%): No retention intervention
+- Treatment group (50%): Retention offer applied
+Randomization is performed at the user level using a stable hashing mechanism to prevent cross-group contamination.
+Each user remains in the same group throughout the experiment.
+
+4️. Experiment Duration
+The experiment runs for 30 days to capture:
+- Natural churn behavior
+- Delayed user responses to the intervention
+- Duration is aligned with:
+- Business churn definition
+- Power analysis requirements
+
+5️. Primary & Guardrail Metrics
+- Primary Metric- Churn Rate, Percentage of users who churn during the experiment window.
+- Guardrail Metrics- These are monitored to prevent unintended negative impact:Average Revenue Per User (ARPU), Customer Lifetime Value (CLV), Support ticket volume, Discount cost per retained customer
+
+6️. Data Collection & Monitoring
+User events are logged in real time:
+- Offer exposure
+- Subscription status
+- Revenue changes
+- Daily monitoring dashboards track:
+- Sample size balance
+- Metric stability
+- Early anomalies
+
+7️. Decision Criteria
+- Statistical significance evaluated at 95% confidence level
+- Practical significance evaluated using: Absolute churn reduction, Confidence interval lower bound
+
 ## SQL-Based Business Analysis
 
 PostgreSQL was used to:
